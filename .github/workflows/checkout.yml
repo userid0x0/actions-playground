@@ -10,6 +10,13 @@ jobs:
     steps:
       - name: Checkout with submodules
         uses: actions/checkout@v4
-      - name: test
-        run: |
+        with:
+          submodules: true
+      - run: |
           find .
+      - name: test viaSsh
+        run:
+          [ $(find ./viaSsh | wc -l) -ge 5 ]
+      - name: test viaHttps
+        run:
+          [ $(find ./viaHttps | wc -l) -ge 5 ]
