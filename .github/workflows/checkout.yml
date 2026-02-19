@@ -14,9 +14,12 @@ jobs:
           submodules: true
       - run: |
           find .
-      - name: test viaSsh
+      - name: test submodule viaSsh
         run: |
           [ $(find ./viaSsh | wc -l) -ge 5 ]
-      - name: test viaHttps
+      - name: test submodule viaHttps
         run: |
           [ $(find ./viaHttps | wc -l) -ge 5 ]
+      - name: test lfs file
+        run: |
+          [ $(stat -c %s test.bin) -ge 800000 ]
