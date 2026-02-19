@@ -1,0 +1,15 @@
+name: Docker Build CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build-fast:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout with submodules
+        uses: actions/checkout@v4
+      - name: test
+        run: |
+          find .
