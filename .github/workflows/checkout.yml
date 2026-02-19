@@ -15,8 +15,8 @@ jobs:
       - run: |
           find .
       - name: test viaSsh
-        run:
+        run: |
           [ $(find ./viaSsh | wc -l) -ge 5 ]
       - name: test viaHttps
-        run:
+        run: |
           [ $(find ./viaHttps | wc -l) -ge 5 ]
