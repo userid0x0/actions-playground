@@ -1,0 +1,6 @@
+[submodule "viaHttps"]
+	path = viaHttps
+	url = http://github.com/userid0x0/svn-docker.git
+[submodule "viaSsh"]
+	path = viaSsh
+	url = git@github.com:userid0x0/svn-docker.git
