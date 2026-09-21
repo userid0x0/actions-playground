@@ -1,0 +1,12 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  call-rw-test:
+    strategy:
+      matrix:
+        image: [first, second, third]
+    uses: $/.github/workflows/rw-test.yml
+    with:
+      image: ${{ matrix.image }}
+    secrets: inherit
