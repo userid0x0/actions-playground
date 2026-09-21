@@ -11,5 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo "${{ github.event_name }}"
           echo "${{ matrix.image }}"
           echo "${{ inputs.image }}"
