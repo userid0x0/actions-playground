@@ -1,0 +1,16 @@
+on:
+  workflow_call:
+    inputs:
+      image:
+        required: true
+        type: string
+    secrets:
+
+jobs:
+  call:
+    name: Call
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "${{ matrix.image }}"
+          echo "${{ inputs.image }}""
