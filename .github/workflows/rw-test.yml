@@ -4,7 +4,6 @@ on:
       image:
         required: true
         type: string
-    secrets:
 
 jobs:
   call:
